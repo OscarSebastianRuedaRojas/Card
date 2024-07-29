@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,46 +106,71 @@ body {
 }
 
 .rating .number {
-    font-size: 36px;
+    position: absolute;
+    translate: -57px 13px;
+    font-size: 55px;
     font-weight: bold;
 }
 
 .rating .label {
-    font-size: 12px;
+    position: absolute;
+    translate: 75px 80px;
+    font-size: 17px;
+    font-weight: bold ;
+    display: block;
+    color: #e2ca60;
+}
+
+.rating .position {
+    position: absolute;
+    translate: 75px 90px;
+    font-size: 45px;
+    font-weight: bold ;
     display: block;
     color: #e2ca60;
 }
 
 .player-image {
     grid-area: image;
-    width: 100%;
-    height: 250px;
+    width:400px;
+    height: auto;
+    position: absolute;
+    z-index: 0;
     object-fit: cover;
+    overflow-y: hidden;
+    translate: -50px -50px;
 }
 
 .player-info {
     grid-area: info;
-    padding: 10px;
-    z-index: 1;
-    translate: 0 -50px;
+    padding: 0;
+    z-index: 10;
+    width: 230px;
+    height: 100px;
+    position: inherit;
+    translate: 35px 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #182129b2;
+    margin: 11px 0;
 }
 .linea{
     width: 90%;
     height: 2px;
-    background: linear-gradient(to right, #e2ca60 0%, #ff8826 100%);
+    translate: 0 -2px;
+    background: linear-gradient(to right, #e2ca60 0%, #fdac16 100%);
 }
 .player-name {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    margin: 0 0 5px 0;
+    margin: 0;
+    color: #e2ca60;
 }
 
 .player-country {
     font-size: 18px;
-    margin: 0 0 10px 0;
+    margin: 0;
     color: #e2ca60;
 }
 
@@ -154,12 +181,24 @@ body {
 
 .background-pattern {
     grid-area: pattern;
-    background-image: 
-        linear-gradient(45deg, #ffffff1a 25%, transparent 25%),
-        linear-gradient(-45deg, #ffffff1a 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ffffff1a 75%),
-        linear-gradient(-45deg, transparent 75%, #ffffff1a 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    opacity: 0.1;
+}
+
+.background-pattern .patron-central {
+    position: relative;
+    z-index: -10;
+    width: 300%;
+    height: auto;
+    translate: -120px -170px;
+    rotate: .4rad;
+    filter: opacity(0.25) brightness(0) invert(1);
+}
+
+.background-pattern .patronIz {
+    position: relative;
+    z-index: -10;
+    width: 300%;
+    height: auto;
+    translate: -120px -170px;
+    rotate: .4rad;
+    filter: opacity(0.25) brightness(0) invert(1);
 }
